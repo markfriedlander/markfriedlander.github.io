@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Make Change · Mark Friedlander</title>
+<meta name="description" content="Make Change, a book by Mark Friedlander.">
+<style>
+  :root {
+    --bg: #0b0a09;
+    --surface: #16130f;
+    --text: #ece7de;
+    --muted: #948b7e;
+    --accent: #c8b28a;
+    --accent-glow: #e6d3ac;
+    --border: #262119;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background:
+      radial-gradient(ellipse 90% 55% at 50% 6%,
+                      rgba(200, 178, 138, 0.07) 0%,
+                      rgba(200, 178, 138, 0.00) 60%),
+      var(--bg);
+    min-height: 100vh;
+  }
+
+  main { max-width: 640px; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
+
+  .home-link { font-size: 0.95rem; color: var(--muted); letter-spacing: 0.02em; }
+  .home-link:hover { color: var(--accent); text-decoration: none; }
+
+  .book-title { font-size: 2.2rem; font-weight: normal; letter-spacing: -0.01em; margin: 1.5rem 0 0.4rem; }
+  .book-sub { font-style: italic; font-size: 1.1rem; color: var(--accent); margin-bottom: 2rem; }
+
+  p { margin-bottom: 1.3rem; }
+
+  .actions {
+    display: flex; flex-wrap: wrap; gap: 0.75rem;
+    margin: 2.25rem 0 1rem;
+  }
+  .btn {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.7rem 1.2rem;
+    color: var(--text);
+    font-size: 1rem;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent-glow); text-decoration: none; }
+  .btn.primary { border-color: var(--accent); color: var(--accent); }
+
+  a { color: var(--accent); text-decoration: none; transition: color 0.15s ease; }
+  a:hover { color: var(--accent-glow); text-decoration: underline; }
+
+  footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--muted); }
+
+  .todo { color: #b06a4a; }
+</style>
+</head>
+<body>
+  <main>
+
+    <a class="home-link" href="index.html">Mark Friedlander</a>
+    <h1 class="book-title">Make Change</h1>
+    <p class="book-sub">Spring 2020 to Fall 2021</p>
+
+    <p>Make Change is a visual record of a dark and turbulent year, spanning Spring 2020 to Fall 2021. These images began as Instagram posts: a way of coping, of shouting into the void when chaos, fear, and uncertainty defined daily life.</p>
+
+    <p>The work is influenced by the artists and voices that have long made sense of unrest: Barbara Kruger, Shepard Fairey, Warhol, Public Enemy, The Clash, Bowie. Their art and music are the lens through which protest and upheaval can be understood.</p>
+
+    <p>The book moves through the pandemic, protest, and political upheaval with stark black-and-white imagery and sharp contrasts. It is at once a diary, a scream, and a reflection on what it means to remain human when humanity itself feels under threat.</p>
+
+    <div class="actions">
+      <a class="btn primary" href="https://www.amazon.com/dp/B0H59B9D9V">Buy on Amazon</a>
+      <a class="btn" href="assets/make-change.pdf" download>Download PDF</a>
+      <a class="btn" href="assets/make-change.epub" download>Download EPUB</a>
+    </div>
+
+    <footer>© 2026 Mark Friedlander &nbsp;·&nbsp; <a href="index.html">Home</a></footer>
+
+  </main>
+</body>
+</html>

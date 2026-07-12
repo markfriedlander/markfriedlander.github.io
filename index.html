@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mark Friedlander</title>
+<meta name="description" content="Mark Friedlander — software, writing, and small experiments.">
+<style>
+  /* ============================================================
+     STUDIO HUB — the calm parent of the app family.
+     Shared skeleton (dark canvas, single-light glow, generous space,
+     the family's layout grammar) with a NEUTRAL warm palette, so each
+     app keeps its own accent (Posey amber, Hal red, etc.).
+     ============================================================ */
+  :root {
+    --bg: #0b0a09;
+    --surface: #16130f;
+    --text: #ece7de;
+    --muted: #948b7e;
+    --accent: #c8b28a;        /* neutral warm sand — the parent tone */
+    --accent-glow: #e6d3ac;
+    --border: #262119;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background:
+      radial-gradient(ellipse 90% 55% at 50% 6%,
+                      rgba(200, 178, 138, 0.07) 0%,
+                      rgba(200, 178, 138, 0.00) 60%),
+      var(--bg);
+    min-height: 100vh;
+  }
+
+  main { max-width: 680px; margin: 0 auto; padding: 5rem 1.5rem 4rem; }
+
+  /* ---- Masthead (name-first, it's a person) ---- */
+  .masthead { margin-bottom: 3.5rem; }
+  .name { font-size: 2.6rem; font-weight: normal; letter-spacing: -0.01em; margin-bottom: 0.4rem; }
+  .descriptor { font-style: italic; font-size: 1.15rem; color: var(--accent); }
+  .bio { font-size: 1.1rem; color: var(--text); max-width: 34rem; margin-top: 1.75rem; }
+
+  /* ---- Section ---- */
+  h2 {
+    font-size: 0.8rem; font-weight: normal; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.16em;
+    margin: 3.25rem 0 1.25rem;
+  }
+
+  /* ---- Software cards ---- */
+  .apps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 540px) { .apps { grid-template-columns: 1fr; } }
+
+  .app {
+    display: block;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.25rem 1.25rem;
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .app:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .app .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 0.5rem; vertical-align: middle; }
+  .app .app-name { font-size: 1.15rem; color: var(--text); vertical-align: middle; }
+  .app .app-tag { display: block; margin-top: 0.35rem; font-size: 0.95rem; color: var(--muted); font-style: italic; }
+
+  /* ---- Simple link list (writing / elsewhere) ---- */
+  .list { list-style: none; }
+  .list li { margin-bottom: 0.85rem; font-size: 1.1rem; }
+  .list .note { color: var(--muted); font-size: 0.95rem; font-style: italic; }
+
+  a { color: var(--accent); text-decoration: none; transition: color 0.15s ease; }
+  a:hover { color: var(--accent-glow); text-decoration: underline; }
+
+  footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--muted); }
+
+  /* Placeholders to fill in are wrapped in .todo so they're easy to spot. */
+  .todo { color: #b06a4a; }
+</style>
+</head>
+<body>
+  <main>
+
+    <header class="masthead">
+      <h1 class="name">Mark Friedlander</h1>
+      <p class="descriptor">Software, writing, and small experiments.</p>
+      <p class="bio">I'm a lawyer, technologist, and builder with a background at the intersection of entertainment, media, and emerging technology. My work has spanned labor and dealmaking, digital media, and the evolving relationship between people and machines. These days, I'm exploring what we can build with AI, and writing about what I learn along the way.</p>
+    </header>
+
+    <h2>Software</h2>
+    <div class="apps">
+
+      <a class="app" href="https://markfriedlander.github.io/Hal-Universal/">
+        <span class="dot" style="background:#e2543a"></span><span class="app-name">Hal</span>
+        <span class="app-tag">A transparent AI companion for iPhone.</span>
+      </a>
+
+      <a class="app" href="https://markfriedlander.github.io/Posey/">
+        <span class="dot" style="background:#c4820a"></span><span class="app-name">Posey</span>
+        <span class="app-tag">A reading companion for iPhone.</span>
+      </a>
+
+      <a class="app" href="https://apps.apple.com/us/app/reflect-creative-sparks/id6745411935">
+        <span class="dot" style="background:#6c6c72"></span><span class="app-name">Reflect</span>
+        <span class="app-tag">Cards to break creative blocks.</span>
+      </a>
+
+      <a class="app" href="https://apps.apple.com/us/app/pure-phase/id6767311034">
+        <span class="dot" style="background:#6c6c72"></span><span class="app-name">Pure Phase</span>
+        <span class="app-tag">Breathe. Focus. Calm. Sleep.</span>
+      </a>
+
+      <a class="app" href="https://apps.apple.com/us/app/purr-machine/id6772356141">
+        <span class="dot" style="background:#6c6c72"></span><span class="app-name">Purr Machine</span>
+        <span class="app-tag">Purr. Breathe. Calm. Sleep.</span>
+      </a>
+
+    </div>
+
+    <h2>Writing</h2>
+    <ul class="list">
+      <li><a href="book.html">Make Change</a> <span class="note">a book · Spring 2020 to Fall 2021</span></li>
+      <li><a href="https://medium.com/@markfriedlander">Articles on Medium →</a> <span class="note">notes on building with AI</span></li>
+    </ul>
+
+    <h2>Elsewhere</h2>
+    <ul class="list">
+      <li><a href="assets/MarkFriedlanderResume.pdf">Résumé (PDF) →</a></li>
+      <li><a href="https://www.linkedin.com/in/markfriedlander">LinkedIn →</a></li>
+    </ul>
+
+    <footer>© 2026 Mark Friedlander</footer>
+
+  </main>
+</body>
+</html>
